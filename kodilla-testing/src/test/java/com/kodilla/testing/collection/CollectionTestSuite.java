@@ -3,9 +3,7 @@ package com.kodilla.testing.collection;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 @DisplayName("Collection Test Suite")
 public class CollectionTestSuite {
@@ -35,21 +33,12 @@ public class CollectionTestSuite {
     @Test
     void testOddNumbersExterminatorNormalList() {
         //Given
-        Integer arrayOfNumbers[] = new Integer[20];
-        Random random = new Random();
-        for (int i = 0; i < 20; i++) {
-            arrayOfNumbers[i] = random.nextInt(50);
-
-            //OLD CODE FROM PREVIOUS EXAMPLE
-            //listOfNumbers.add(random.nextInt(50));
-            //listOfNumbers.add(i);
-            //END OLD CODE
-        }
-        List<Integer> listOfNumbers = Arrays.asList(arrayOfNumbers);
+        List <Integer> listOfNumbers = List.of(1,25,23,45,89,7,12,5,67,54,89);
+        List <Integer> listWithoutOddNumbers = List.of(12,54);
         //When
         List<Integer> result = OddNumbersExterminator.exterminate(listOfNumbers);
         System.out.println("Testing list");
         //Then
-        Assertions.assertNotEquals(listOfNumbers, result);
+        Assertions.assertEquals(result, listWithoutOddNumbers);
     }
 }
