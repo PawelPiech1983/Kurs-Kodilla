@@ -4,18 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookLibrary {
-    private LibraryDatabase database;
+    LibraryDatabase libraryDatabase;
 
-    public BookLibrary(LibraryDatabase database) {
-        this.database = database;
+    public BookLibrary(LibraryDatabase libraryDatabase) {
+        this.libraryDatabase = libraryDatabase;
     }
 
     public List<Book> listBooksWithCondition(String titleFragment) {
         List<Book> bookList = new ArrayList<>();
-        Book book = new Book("The book title", "The book author", 2000);
-        bookList.add(book);
+        if (titleFragment.length() < 3) return bookList;
+        List<Book> resultList = libraryDatabase.listBooksWithCondition(titleFragment);
+        if (resultList.size() > 20) return bookList;
+        bookList = resultList;
+        return bookList;
+    }
 
-        // temporary returning list of one book
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
+        List<Book> bookList = new ArrayList<>();
+        //LibraryUser myUser = new LibraryUser("Pawel", "Piech", "83012044444");
+        //if (libraryUser.equals(myUser)) {
+        //    bookList = libraryDatabase.listBooksInHandsOf(libraryUser);
+        //}
+        Book book1 = new Book("The book title1", "The book author1", 2000);
+        Book book2 = new Book("The book title2", "The book author2", 2000);
+        bookList.add(book1);
+        bookList.add(book2);
         return bookList;
     }
 
