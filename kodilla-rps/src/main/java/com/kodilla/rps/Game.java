@@ -19,10 +19,8 @@ public class Game {
         wins = GetnumberOfWins();
         GameRules();
         RpsGame();
-
-
-
     }
+
     public String GetName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your Name: ");
@@ -36,6 +34,8 @@ public class Game {
         }
         return name;
     }
+
+
     public Integer GetnumberOfWins() {
         Scanner scannerWins = new Scanner(System.in);
         wins = scannerWins.nextInt();

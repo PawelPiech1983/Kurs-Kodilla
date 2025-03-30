@@ -14,15 +14,14 @@ public class CalculateStatistics {
         double averagePostsPerUser = 0.0;
         double averageCommentsPerUser = 0.0;
         double averageCommentsPerPost = 0.0;
-        if(numberOfUsers > 0 && numberOfPosts > 0 && numberOfComments > 0) {
+        if(numberOfUsers > 0) {
             averagePostsPerUser = numberOfPosts / numberOfUsers;
             averageCommentsPerUser = numberOfComments / numberOfUsers;
-            averageCommentsPerPost = numberOfComments / numberOfPosts;
-            schowStatistics(averagePostsPerUser, averageCommentsPerUser, averageCommentsPerPost);
-        } else if (numberOfUsers > 0 && numberOfPosts > 0 && numberOfComments < 0 ) {
-            averagePostsPerUser = numberOfPosts / numberOfUsers;
-            schowStatistics(averagePostsPerUser, averageCommentsPerUser, averageCommentsPerPost);
         }
+        if (numberOfPosts > 0) {
+            averageCommentsPerPost = numberOfComments / numberOfPosts;
+        }
+        schowStatistics(averagePostsPerUser, averageCommentsPerUser, averageCommentsPerPost);
         double[] advStatistics = {numberOfUsers, numberOfPosts, numberOfComments, averagePostsPerUser, averageCommentsPerUser, averageCommentsPerPost};
         return advStatistics;
     }

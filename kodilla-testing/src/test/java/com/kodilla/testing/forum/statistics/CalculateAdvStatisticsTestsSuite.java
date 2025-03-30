@@ -4,7 +4,9 @@ import com.kodilla.testing.forum.ForumUser;
 import com.kodilla.testing.weather.stub.Temperatures;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +14,11 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-
 @DisplayName("CalculateAdvStatistics Tests Suite")
 public class CalculateAdvStatisticsTestsSuite {
 
-    @Mock
-    private Statistics statisticsMock;
+
+    private Statistics statisticsMock = Mockito.mock(Statistics.class);
 
     @DisplayName("Null posts Tests Suite")
     @Test
