@@ -1,11 +1,7 @@
 package com.kodilla.testing.forum.statistics;
 
-import com.kodilla.testing.forum.ForumUser;
-import com.kodilla.testing.weather.stub.Temperatures;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import java.util.ArrayList;
