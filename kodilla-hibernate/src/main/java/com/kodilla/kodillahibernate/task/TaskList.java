@@ -3,7 +3,7 @@ package com.kodilla.kodillahibernate.task;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="TASKLIST")
+@Table(name="TASKLISTS")
 public class TaskList {
     private int id;
     private String listName;
