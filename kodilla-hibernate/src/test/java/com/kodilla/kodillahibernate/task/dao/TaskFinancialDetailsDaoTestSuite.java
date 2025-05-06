@@ -26,6 +26,7 @@ class TaskFinancialDetailsDaoTestSuite {
                 new TaskFinancialDetails(new BigDecimal(115), false);
         taskFinancialDetailsDao.save(taskFinancialDetails);
         int id = taskFinancialDetails.getId();
+        System.out.println(id);
 
         //When
         List<TaskFinancialDetails> resultList = taskFinancialDetailsDao.findByPaid(false);

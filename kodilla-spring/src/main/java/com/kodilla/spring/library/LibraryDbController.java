@@ -1,7 +1,6 @@
-package com.kodilla.spring.lib;
+package com.kodilla.spring.library;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 @Component
 public class LibraryDbController {

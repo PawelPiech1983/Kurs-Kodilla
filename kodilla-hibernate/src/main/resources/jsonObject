@@ -1,0 +1,23 @@
+{
+    "name": "CAR",
+    "brand":"Mercedes"
+    "seat":[
+            {
+                "material": "leather",
+                "color": "red"
+            },
+            {
+                "material": "leather",
+                "color": "red"
+            },
+            {
+                "material": "leather",
+                "color": "red"
+            },
+            {
+                "material": "leather",
+                "color": "red"
+            }
+            ]
+    "engineCapacity": 2.0
+}

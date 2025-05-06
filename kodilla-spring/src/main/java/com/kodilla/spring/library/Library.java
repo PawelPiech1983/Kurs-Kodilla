@@ -1,9 +1,7 @@
-package com.kodilla.spring.lib;
+package com.kodilla.spring.library;
 
-import com.kodilla.spring.lib.LibraryDbController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
